@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<element>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>pfe2</display-name>
+  <welcome-file-list>
+    <welcome-file>connection.html</welcome-file>
+    <welcome-file>connection.html</welcome-file>
+    <welcome-file>Connexion.jsp</welcome-file>
+    <welcome-file>connection.html</welcome-file>
+    <welcome-file>connection.html</welcome-file>
+    <welcome-file>Connexion.jsp</welcome-file>
+  </welcome-file-list>
+  <mail-session name="default" jndi-name="java:jboss/mail/Default" from="sender@gmail.com">
+    <smtp-server outbound-socket-binding-ref="mail-smtp" ssl="true" username="sender@gmail.com" password="password"/>
+</mail-session>
+  <servlet>
+    <description></description>
+    <display-name>ServletPlanEtude</display-name>
+    <servlet-name>ServletPlanEtude</servlet-name>
+    <servlet-class>servlets.ServletPlanEtude</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletPlanEtude</servlet-name>
+    <url-pattern>/ServletPlanEtude</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>ajouterEnseignantDatabase</display-name>
+    <servlet-name>ajouterEnseignantDatabase</servlet-name>
+    <servlet-class>servlets.ajouterEnseignantDatabase</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ajouterEnseignantDatabase</servlet-name>
+    <url-pattern>/ajouterEnseignantDatabase</url-pattern>
+  </servlet-mapping>
+  
+ 
+  
+   <servlet>
+    <description></description>
+    <display-name>ShowPlanEtude</display-name>
+    <servlet-name>ShowPlanEtude</servlet-name>
+    <servlet-class>servlets.ShowPlanEtude</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShowPlanEtude</servlet-name>
+    <url-pattern>/ShowPlanEtude</url-pattern>
+  </servlet-mapping>
+ <login-config>
+  <auth-method>FORM</auth-method>
+ <realm-name>autho</realm-name>
+ <form-login-config>
+   <form-login-page>Connexion.jsp</form-login-page>
+   </form-login-config>
+ 
+ </login-config>
+</web-app>
+</element>
